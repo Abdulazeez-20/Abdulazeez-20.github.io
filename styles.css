@@ -1,0 +1,107 @@
+:root{
+ --White: hsl(0, 0%, 100%);
+ --Grey: hsl(0, 0%, 50%);
+ --Black: hsl(0, 0%, 7%);
+ --Yellow: hsl(47, 88%, 63%);
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    margin: 0;
+ 
+    font-family: 'Figtree', sans-serif;
+    background-color: var(--Yellow);
+}
+
+.card{
+    display: grid;
+    place-items: center;
+    width: 384px;
+    height: 522px;
+    border: 1px solid;
+    border-radius: 20px;
+    cursor: pointer;
+
+    box-shadow: 8px 10px var(--Black);
+    background-color: var(--White);
+}
+.card:hover h2{
+    color: var(--Yellow);
+}
+.card:hover{
+    box-shadow: 14px 15px var(--Black);
+}
+
+.card_body{
+    width: 336px;
+}
+
+.img_wallpaper{
+    width: 336px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+button{
+    width: 82px;
+    height: 29px;
+    padding: 4px 12px;
+    margin: 0 0 12px 0;
+    border: none;
+    border-radius: 4px;
+
+    font-weight: bold;
+    background-color: var(--Yellow);
+}
+
+.date_text{
+    margin: 0 0 12px 0;
+}
+
+h2{
+    margin: 0 0 12px 0;
+}
+
+.description{
+    line-height: 25px;
+    color: var(--Grey);
+    margin: 0;
+}
+.card_footer{
+    width: 336px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card_footer > img{
+    width: 32px;
+    height: 32px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--Black);
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 450px) {
+    .card{
+        width: 327px;
+    }
+
+    .img_wallpaper{
+        width: 279px;
+    }
+
+    .card_body, .card_footer{
+        width: 279px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+}
